@@ -17,8 +17,6 @@ class ScrachActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scrach)
 
-
-
         dialog = Dialog(this)
         val scratchView = findViewById<ScratchView>(R.id.scratchView)
         scratchView.setRevealListener(object : IRevealListener {
