@@ -44,6 +44,7 @@ dependencies {
     implementation ("com.github.mmoamenn:LuckyWheel_Android:0.3.0")
     implementation ("com.github.AnupKumarPanwar:ScratchView:1.3")
     implementation ("com.airbnb.android:lottie:3.4.0")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
     testImplementation("junit:junit:4.13.2")
     implementation ("com.github.zynkware:Document-Scanning-Android-SDK:1.1.1")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
