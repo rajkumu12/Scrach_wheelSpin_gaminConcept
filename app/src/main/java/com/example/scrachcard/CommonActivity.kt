@@ -10,6 +10,7 @@ class CommonActivity : AppCompatActivity() {
     lateinit var tv_wheel:TextView
     lateinit var tv_scratch:TextView
     lateinit var tv_docScan:TextView
+    lateinit var tv_audio:TextView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +19,7 @@ class CommonActivity : AppCompatActivity() {
         tv_wheel= findViewById(R.id.spinwheel)
         tv_scratch= findViewById(R.id.scrachs)
         tv_docScan= findViewById(R.id.scdocScann)
+        tv_audio= findViewById(R.id.echoAudio)
 
 
 
@@ -30,6 +32,9 @@ class CommonActivity : AppCompatActivity() {
 
         tv_docScan.setOnClickListener {
             startActivity(Intent(this@CommonActivity,ScannedImageList::class.java))
+        }
+        tv_audio.setOnClickListener {
+            startActivity(Intent(this@CommonActivity,EchoAudio::class.java))
         }
     }
 }

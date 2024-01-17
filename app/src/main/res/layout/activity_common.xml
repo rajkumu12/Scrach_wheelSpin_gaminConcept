@@ -39,4 +39,15 @@
         android:layout_marginTop="20dp"
         android:layout_height="40dp"/>
 
+    <TextView
+        android:id="@+id/echoAudio"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="@string/audio_case"
+        android:layout_marginHorizontal="18dp"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_height="40dp"/>
+
 </LinearLayout>
