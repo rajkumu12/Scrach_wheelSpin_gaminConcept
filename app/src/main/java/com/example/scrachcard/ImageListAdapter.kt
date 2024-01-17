@@ -23,8 +23,7 @@ internal class ImageListAdapter(private var imageslist: List<ImageModel>,private
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val image = imageslist[position]
-        Glide.with(context).load(image).into(holder.image)
-
+        Glide.with(context).load(image.getImage()).into(holder.image)
     }
     override fun getItemCount(): Int {
         return imageslist.size

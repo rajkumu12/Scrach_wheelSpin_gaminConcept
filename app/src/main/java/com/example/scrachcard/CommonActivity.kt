@@ -29,7 +29,7 @@ class CommonActivity : AppCompatActivity() {
         }
 
         tv_docScan.setOnClickListener {
-            startActivity(Intent(this@CommonActivity,AppScanActivity::class.java))
+            startActivity(Intent(this@CommonActivity,ScannedImageList::class.java))
         }
     }
 }
