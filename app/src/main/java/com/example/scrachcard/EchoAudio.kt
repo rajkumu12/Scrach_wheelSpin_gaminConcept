@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.media.MediaPlayer
 import android.media.MediaRecorder
+import android.media.audiofx.PresetReverb
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
@@ -135,8 +136,18 @@ class EchoAudio : AppCompatActivity() {
         try {
             // below method is used to set the
             // data source which will be our file name
-            mPlayer!!.setDataSource(file.absolutePath)
 
+
+            mPlayer!!.setDataSource(file.absolutePath)
+            val reverb = PresetReverb(0, mPlayer!!.getAudioSessionId())
+            reverb.preset = PresetReverb.PRESET_LARGEROOM
+            reverb.enabled=true
+            mPlayer!!.setAuxEffectSendLevel(1.0f);
+           /* val reverb = EnvironmentalReverb(1, mPlayer!!.audioSessionId)
+            reverb.preset = PresetReverb.PRESET_LARGEHALL
+            reverb.setEnabled(true)
+            mPlayer!!.attachAuxEffect(reverb.id)
+            mPlayer!!.setAuxEffectSendLevel(1.0f)*/
             // below method will prepare our media player
             mPlayer!!.prepare()
 
