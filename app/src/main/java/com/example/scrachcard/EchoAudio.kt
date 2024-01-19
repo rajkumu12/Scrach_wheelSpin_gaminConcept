@@ -142,7 +142,6 @@ class EchoAudio : AppCompatActivity() {
             val reverb = PresetReverb(0, mPlayer!!.getAudioSessionId())
             reverb.preset = PresetReverb.PRESET_LARGEROOM
             reverb.enabled=true
-            mPlayer!!.setAuxEffectSendLevel(1.0f);
            /* val reverb = EnvironmentalReverb(1, mPlayer!!.audioSessionId)
             reverb.preset = PresetReverb.PRESET_LARGEHALL
             reverb.setEnabled(true)
